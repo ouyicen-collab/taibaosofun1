@@ -1,0 +1,50 @@
+body {
+    background-color: white !important;
+}
+
+.container {
+    padding: 140px 10% 20px 10% !important;
+    text-align: center;
+}
+
+/* 核心修正：讓容器基準點與圖片左上角 0,0 點絕對重合 */
+#map-wrapper {
+    position: relative;
+    display: inline-block !important; 
+    margin: 0 auto;
+    line-height: 0; /* 消除圖片底部空隙 */
+}
+
+#main-map {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #ddd;
+}
+
+/* Tooltip 定位：設為最高層級並使用 pageX 定位 */
+.tooltip-style {
+    display: none;
+    position: absolute;
+    background-color: #8B5A2B;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 1rem;
+    pointer-events: none; /* 必備：防止文字框遮擋滑鼠感應 */
+    z-index: 99999;
+    white-space: nowrap;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+#toast {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #8B5A2B;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    z-index: 10000;
+}

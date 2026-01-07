@@ -1,0 +1,86 @@
+/* 基本設定 */
+body {
+    background-color: #fcfcfc;
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft JhengHei", sans-serif;
+}
+
+/* 1. 標題區塊：精確對齊導覽列下方 */
+.museum-header {
+    background-color: #aa8c7b; /* 標題背景色 */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    /* 修正關鍵：根據您的截圖，85px 左右能讓標題緊貼導覽列 */
+    margin-top: 0px; 
+    width: 100%;
+}
+
+.museum-header h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+/* 2. 輪播圖容器：緊接標題區塊，不留空隙 */
+.museum-carousel { 
+    margin-top: 0; 
+    width: 100%;       
+    height: 450px;     
+    overflow: hidden;  
+    position: relative;
+    background-color: #fff;
+}
+
+.carousel-track { 
+    display: flex; 
+    width: 100%;       
+    height: 100%;
+}
+
+.carousel-slide { 
+    flex: 0 0 100%;    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-slide img { 
+    width: 100%;
+    height: 100%;
+    /* 使用 ExamPic.png 並確保不變形 */
+    object-fit: contain; 
+}
+
+/* 3. 下方內容區 */
+.container { 
+    max-width: 800px; 
+    margin: 30px auto; 
+    padding: 0 20px; 
+}
+
+.content-wrapper {
+    margin-bottom: 40px;
+}
+
+.text-box {
+    padding: 20px 0;
+    line-height: 1.8;
+}
+
+.event-headline {
+    font-size: 24px;
+    color: #444;
+    border-left: 6px solid #8D7365;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+.full-width-img {
+    width: 100%;      
+    height: auto; 
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}

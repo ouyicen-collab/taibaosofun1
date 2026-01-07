@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地理位置 - 太保旅遊去</title>
+    <link rel="stylesheet" href="commonstyle.css"> 
+    <link rel="stylesheet" href="location_style.css">
+</head>
+<body>
+
+<div class="sticky-wrapper">   
+    <div class="top-bar">
+        <a href="../index/index.html">回首頁</a><a href="#">回最上方</a>
+    </div>
+<header>
+    <div style="display: flex; align-items: center;">
+        <img src="ExamPic.png" alt="吉祥物" style="height: 80px; margin-right: 10px; margin-bottom: 5px;">  
+        <h2 style="font-size: 28px;">太保旅遊</h2>
+    </div>   
+    <nav>
+        <ul>
+            <li>
+                <a href="../taibaointro/taibaointro.html" style="color:white; text-decoration:none;">
+                太保簡介</a>
+            </li>
+            <li>
+                <a href="../h2ptaibao/h2ptaibao.html" style="color:white; text-decoration:none;">
+                太保怎麼玩</a>
+            </li>
+            <li>
+              <a href="../location/location.html" style="color:white; text-decoration:none;">
+              地理位置</a>
+            </li>
+            <li>
+                <a href="../taibaotraditions/taibaotraditions.html" style="color:white; text-decoration:none;">
+                傳說與民俗</a>
+            </li>
+            <li>
+              <a href="../budget/budget.html" style="color:white; text-decoration:none;">
+              預算估計</a>
+            </li>       
+            <li>
+                <a href="../taibaogod/taibaogod.html" style="color:white; text-decoration:none;">
+                宗教信仰</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+</div> 
+
+    <main class="container">
+        <div class="section-title"><h2>地理位置</h2></div>
+
+        <div class="map-section">
+            <div id="map-wrapper">
+                <img src="嘉義縣圖-太保.png" usemap="#image-map" id="main-map" alt="地圖">
+                
+                <map name="image-map" id="image-map">
+                    <area alt="太保市" href="javascript:void(0)" onclick="switchToTaibao();" 
+                          onmouseover="showTooltip(event, '點擊放大查看太保市')" onmouseout="hideTooltip()"
+                          coords="405,495,399,512,403,548,410,597,461,599,503,612,539,607,542,553,569,539,588,535,606,535,623,520,627,499,614,485,614,462,620,451,639,442,646,426,617,426,600,426,587,434,577,442,560,427,538,424,528,427,519,432,486,428,475,447,462,479,440,489" shape="poly">
+                </map>
+
+                <map name="taibao-detail-map" id="taibao-detail-map">
+                    <area alt="故宮南院" href="javascript:void(0)" onclick="goToAttraction('故宮南院', '../intro_0/intro_museum.html');" onmouseover="showTooltip(event, '故宮南院')" onmouseout="hideTooltip()" coords="523,48,516,55,501,62,493,68,477,70,459,70,440,63,419,63,402,68,402,78,407,94,423,154,408,154,404,165,397,172,415,178,439,179,469,181,504,184,559,184,585,184,688,183,767,176,771,164,759,151,772,145,777,130,752,70,729,75,701,78,675,78,642,71,626,60,612,52,594,54,567,55,547,49,535,49" shape="poly">
+                    <area alt="咩咩上樹" href="javascript:void(0)" onclick="goToAttraction('咩咩上樹', '../intro_0/intro_meemee.html');" onmouseover="showTooltip(event, '咩咩上樹')" onmouseout="hideTooltip()" coords="377,211,365,221,367,236,351,249,329,255,318,238,307,230,299,235,289,248,281,255,281,268,262,275,245,281,234,289,224,305,205,325,197,335,200,349,194,369,192,386,184,402,203,419,275,427,326,426,542,418,564,414,574,406,561,386,555,364,555,338,542,325,515,300,491,306,497,290,499,275,466,267,474,254,459,251,453,232,440,233,434,252,421,255,402,249,389,238,383,217" shape="poly">
+                    <area alt="品皇咖啡" href="javascript:void(0)" onclick="goToAttraction('品皇咖啡', '../intro_0/intro_cofe.html');" onmouseover="showTooltip(event, '品皇咖啡')" onmouseout="hideTooltip()" coords="694,435,671,438,663,451,674,465,659,467,647,486,667,498,650,506,632,514,615,489,586,468,572,479,555,473,540,486,543,498,550,516,559,529,508,517,494,535,486,559,486,579,485,589,493,600,513,611,599,619,671,619,713,618,783,613,831,606,866,597,860,583,868,552,860,538,837,519,812,521,796,532,813,502,817,479,771,471,739,489,723,505,694,498,710,473,699,447" shape="poly">
+                    <area alt="福濟宮" href="javascript:void(0)" onclick="goToAttraction('福濟宮', '../intro_0/intro_fuji.html');" onmouseover="showTooltip(event, '福濟宮')" onmouseout="hideTooltip()" coords="949,167,920,157,895,157,880,165,872,184,853,189,837,194,834,175,817,186,812,205,809,218,796,229,798,249,809,265,821,272,829,284,820,289,799,297,791,319,794,335,788,354,783,367,777,385,802,394,837,400,875,400,918,400,972,400,1025,396,1123,388,1126,375,1115,356,1111,334,1107,311,1104,294,1076,288,1079,275,1096,254,1103,229,1099,216,1092,194,1072,172,1057,178,1061,187,1045,189,1033,184,1018,170,1014,152,996,159,979,159,964,170" shape="poly">
+                </map>
+            </div>
+        </div>
+    </main>
+
+    <div id="map-tooltip" class="tooltip-style"></div>
+    <div id="toast"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+    <script src="location_script.js"></script>
+</body>
+</html>
